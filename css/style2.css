@@ -1,0 +1,97 @@
+/* projects style sheet (version 2) */
+
+/* Experimental CSS styles */
+
+body { background-color:#B0C4DE; }
+
+#img.format{ width: 25%; }
+div.c1 { text-align: center }
+div.c2 { margin-left: 2em }
+h1.main { color: #FFFF00; text-align: center }
+h2.c1 { color: green }
+h3.c1 { color: yellow }
+hr { width: 100% }
+img { border: 0; }
+img.footer { border: "1"; height: "48"; width: "48"; }
+ol.circle {list-style-type: circle;}
+ol.square {list-style-type: square;}
+ol.upper  {list-style-type: upper-alpha;}
+ol.lower  {list-style-type: lower-alpha;}
+ol.rupper {list-style-type: upper-roman;}
+ol.rlower {list-style-type: lower-roman;}
+p { text-indent: 2.0em }
+p.c1 { border: 0px solid ; width: 90% ; color: #000000 }
+table.search { style="float:center; border:solid 1px #000; background-color:#cc9" }
+table.footer { table-layout: fixed; margin-left: 2em; width: 1024px; margin-left:auto; margin-right:auto; }
+tr.c1 { margin-left: 22em ; padding: 10em; }
+td { padding-left: 5px; text-align: left; height: 5em; }
+
+
+/* No borders on image links */
+
+a:link img, a:visited img { border-style: none }
+
+address img { float: right; width: 88px; height: 31px; }
+address     { clear: right; }
+
+p.title {
+  // font-size: 120%;
+  font-weight: bold;
+  color: blue;       /* Change this color util it's NOT ugly */
+  text-align: center;
+}
+
+h1 {
+  font-weight: bold;
+  color: darkblue;
+}
+
+h2 {
+  color: darkgreen;
+}
+
+.fdp:before  { content: "\2058\ "; }
+.fdp:after   { content: "\ \2058"; } 
+
+.www_title  { font-family: "Georgia,Palatino,Times,Roman";
+              font-size: 33pt; 
+              text-align: center;}
+
+.www_sidebar  { text-align: center; 
+               font-family: "Georgia,Palatino,Times,Roman";
+               font-size: 12pt;
+               margin-left: 0em; margin-right: 0em;
+               padding: 0.15em 0.15em 0.15em .15em; 
+               width: 100%;
+               background: url("/images/lines.gif");
+               border: 2px solid #cccccc }
+
+.www_sectiontitle, .www_subsection {
+               border-width: 1px;
+               border-style: solid none;
+               text-align: center;
+               vertical-align: middle;
+               font-family: "Georgia,Palatino,Times,Roman";
+               font-weight: bold; font-size: 18pt;
+               background: url("/images/lines.gif");
+               padding: 0.1em 0.1em 0.1em .1em; 
+               width: 100%;
+               margin-bottom: 0.3em; }
+
+.www_subsection { width: 75%;
+                  text-align: left;  font-size: 13pt; }
+
+.www_subsubsection { margin: 1.0em 0.5em 0.5em 0.5em;
+                     font-weight: bold; font-style: oblique;
+                     border-bottom: 1px solid #999999; font-size: 12pt;
+                     width: 75%; }
+
+.www_code { border: solid 1px gray; background: #eeeeee;
+            margin: 0 1em 0 1em; 
+            padding: 0 1em 0 1em;
+            display: table; }
+
+.www_footer { text-align: left; color: #ffbf00; background: blue; padding: 1 1 1 1 }
+
+
+/* End of File */
