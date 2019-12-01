@@ -1,0 +1,6 @@
+
+#!/bin/bash
+
+echo Stripping carriage returns from $1
+tr -d '\r' < $1 > /tmp/$PPID.clean.cr
+mv /tmp/$PPID.clean.cr $1
