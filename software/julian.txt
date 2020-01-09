@@ -1,0 +1,6 @@
+:
+# print Julian date
+
+date +"Julian Date: %j"
+
+# EOF

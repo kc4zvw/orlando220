@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# send formfeed to printer  (ASCII 12 decimal or 0x0C)
+
+echo -ne "\f" | lpr
+
+# EOF
