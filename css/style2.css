@@ -22,6 +22,7 @@ ol.rupper {list-style-type: upper-roman;}
 ol.rlower {list-style-type: lower-roman;}
 p { text-indent: 2.0em }
 p.c1 { border: 0px solid ; width: 90% ; color: #000000 }
+span.banner { color: lightblue }
 span.node1 { color: lightblue }
 table.search { style="float:center; border:solid 1px #000; background-color:#cc9" }
 table.footer { table-layout: fixed; margin-left: 2em; width: 1024px; margin-left:auto; margin-right:auto; }
