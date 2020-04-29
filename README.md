@@ -1,6 +1,6 @@
 # orlando220
 
-This page will always sort of the out of date
+This page will always be sort of the under construction and out of date.
 
 Current Projects page
 
