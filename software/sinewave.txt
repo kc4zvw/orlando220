@@ -1,0 +1,48 @@
+//
+// $Id: sinewave.c,v 0.2 2020/05/27 13:45:00 kc4zvw Exp kc4zvw $
+//
+
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+/* function prototype */
+
+int tab(int);
+
+
+int main()
+{
+	int a, b = 0;
+	float t;
+
+	printf("                              SINE WAVE\n");
+	printf("               Creative Computing  Morristown, New Jersey\n");
+	printf("\n");
+
+repeat:
+	for (t = 0; t <= 40; t += 0.25) {
+		a = (int) floor(26 + 25 * sinf(t));
+		tab(a);
+
+		if ( b == 0 ) {
+			printf("Creative\n");
+			b = 1;
+		} else {
+			printf("Computing\n");
+			b = 0;
+		}
+	}
+	goto repeat;
+}
+
+int tab(int num)
+{
+	for (int i = 1; i < num; i++) {
+		printf(" ");
+	}
+
+	return 0;
+}
+
+// End of File

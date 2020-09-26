@@ -1,0 +1,5 @@
+#!/bin/sh
+
+date +"Revised: %A, %B %d, %Y at %H:%M:%S %p (%Z)"
+
+# End of Script
