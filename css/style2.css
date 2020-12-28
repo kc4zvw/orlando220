@@ -8,6 +8,7 @@ a:visited { color: darkgreen; }
 #img.format{ width: 25%; }
 div.c1 { text-align: center }
 div.c2 { margin-left: 2em }
+div.c3 { width: 750px; margin: auto; border: 0px solid; }
 h1.main { color: #FFFF00; text-align: center }
 h2.c1 { color: green }
 h3.c1 { color: yellow }
@@ -22,8 +23,11 @@ ol.rupper {list-style-type: upper-roman;}
 ol.rlower {list-style-type: lower-roman;}
 p { text-indent: 2.0em }
 p.c1 { border: 0px solid ; width: 90% ; color: #000000 }
+p.c2 { margin-left: 1em; color: #0C00FFF0 ; font-size: 14pt } 
+p.c3 { margin-left: 1em; color: #0C00FFF0 ; font-size: 13pt }
 span.banner { color: lightblue }
 span.node1 { color: lightblue }
+span.node2 { text-align: left; }
 table.search { style="float:center; border:solid 1px #000; background-color:#cc9" }
 table.footer { table-layout: fixed; margin-left: 2em; width: 1024px; margin-left:auto; margin-right:auto; }
 tr.c1 { margin-left: 22em ; padding: 10em; }
