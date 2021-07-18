@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# $Id: set-title,v 0.2 2017/07/24 14:14:18 kc4zvw Exp kc4zvw $
+#
+# This function will set the title of your PuTTY window to the given String
+
+title() {
+	echo -ne "\033]0;"$1"\007"
+}
+
+title $1
+
+# End of Script
