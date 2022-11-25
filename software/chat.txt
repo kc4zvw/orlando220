@@ -1,0 +1,6 @@
+#!/bin/bash
+
+### irc -c "#leap" $USER irc.linuxceptional.com:6667
+irc -c "#leap" $USER irc.us.freenode.net:6667
+
+# End of Script

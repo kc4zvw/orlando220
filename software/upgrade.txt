@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pkg_version -c > ~/updates
+
+# EOF

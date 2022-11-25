@@ -8,27 +8,27 @@ a:visited { color: darkgreen; }
 #img.format{ width: 25%; }
 div.c1 { text-align: center }
 div.c2 { margin-left: 2em }
-div.c3 { width: 750px; margin: auto; border: 0px solid; }
-h1.main { color: #FFFF00; text-align: center }
-h2.c1 { color: green }
+div.c3 { margin: auto; border: 0 solid; }
+.main { color: #FFFF00; text-align: center }
+h2.c1 { color: darkgreen }
 h3.c1 { color: yellow }
 hr { width: 100% }
 img { border: 0; }
-img.footer { border: "1"; height: "48"; width: "48"; }
-ol.circle {list-style-type: circle;}
-ol.square {list-style-type: square;}
-ol.upper  {list-style-type: upper-alpha;}
-ol.lower  {list-style-type: lower-alpha;}
-ol.rupper {list-style-type: upper-roman;}
-ol.rlower {list-style-type: lower-roman;}
+img.footer { border: 1px; height: 48px; width: 48px; }
+.circle {list-style-type: circle;}
+.square {list-style-type: square;}
+.upper  {list-style-type: upper-alpha;}
+.lower  {list-style-type: lower-alpha;}
+.rupper {list-style-type: upper-roman;}
+.rlower {list-style-type: lower-roman;}
 p { text-indent: 2.0em }
-p.c1 { border: 0px solid ; width: 90% ; color: #000000 }
+p.c1 { border: 0 solid ; color: #000000 }
 p.c2 { margin-left: 1em; color: #0C00FFF0 ; font-size: 14pt } 
 p.c3 { margin-left: 1em; color: #0C00FFF0 ; font-size: 13pt }
-span.banner { color: lightblue }
-span.node1 { color: lightblue }
-span.node2 { text-align: left; }
-table.search { style="float:center; border:solid 1px #000; background-color:#cc9" }
+.banner { color: lightblue }
+.node1 { color: lightblue }
+.node2 { text-align: left; }
+
 table.footer { table-layout: fixed; margin-left: 2em; width: 1024px; margin-left:auto; margin-right:auto; }
 tr.c1 { margin-left: 22em ; padding: 10em; }
 td { padding-left: 5px; text-align: left; height: 5em; }
@@ -41,8 +41,8 @@ a:link img, a:visited img { border-style: none }
 address img { float: right; width: 88px; height: 31px; }
 address     { clear: right; }
 
-p.title {
-  // font-size: 120%;
+.title {
+  /* font-size: 120%; */
   font-weight: bold;
   color: blue;       /* Change this color util it's NOT ugly */
   text-align: center;
@@ -51,10 +51,6 @@ p.title {
 h1 {
   font-weight: bold;
   color: darkblue;
-}
-
-h2 {
-  color: darkgreen;
 }
 
 .fdp:before  { content: "\2058\ "; }
@@ -98,7 +94,7 @@ h2 {
             padding: 0 1em 0 1em;
             display: table; }
 
-.www_footer { text-align: left; color: #ffbf00; background: blue; padding: 1 1 1 1 }
+.www_footer { text-align: left; color: #ffbf00; background: blue; padding: 1px 1px 1px 1px }
 
 
 /* Add a black background color to the top navigation */
@@ -127,6 +123,31 @@ h2 {
 .topnav a.active {
 	background-color: #4CAF50;
 	color: white;
+}
+
+/* HORIZ RULE APPEARANCE. ALL WERE MADE THE SAME
+IF DIFFERENT HORIZ RULES BECOME ESSENTIAL, PUT
+CLASSES BELOW THE INITIAL HR LINE. */
+hr{color: #EA202C; height: 1px;}
+
+/* SPECIFY HOW BOTTOM ICONS LOOK AND ALIGN */
+#logos{text-align:center; padding: 1em;}
+#logos > .spacer{
+  margin-left:auto;
+  margin-right:auto;
+  display: inline-block;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  text-align: center;
+}
+
+/* SPECIFY APPEARANCE AND LAYOUT FOR FORM */
+form div{margin-top:1ex; margin-bottom:1ex;}
+.contents_title{
+  margin-top:3ex;
+  margin-bottom:0ex;
+  font-size:110%;
+  font-weight: bold;
 }
 
 /* End of File */

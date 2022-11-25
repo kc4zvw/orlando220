@@ -3,10 +3,12 @@
 <html lang="en">
 
 <head>
-  <meta name="generator" content="HTML Tidy, see www.w3.org">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="Description" content="notes for electonics projects">
-  <link rel="stylesheet" type="text/css" href="css/style2.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Intelligence,and the sweat of our browse" />
+  <meta name="Description" content="notes for collection of software" />
+  
+  <link rel="stylesheet" type="text/css" href="css/style2.css" />
   <link rel="shortcut icon" href="favicon.ico" />
 
   <title>Software Listing</title>
@@ -21,20 +23,22 @@
      footer { clear: both; }
      table, th, td { border: 1px solid black; border-collapse: collapse; }
      th, td { padding: 5px; text-align: left; }
+     td.c1 { width: 450px;}
+     table.c2 { border: 0; width: 80%; background-color: lightgray; }
   </style>
 </head>
 
 <body>
-
+  <br />
+  <a href="/">HOME</a>
+  <br />
+  
   <header>
     <div class="top">
       <p class="www_title">Example Software Scripts:</p>
     </div>
   </header>
 
-  <br />
-  <a href="/">HOME</a>
-  <br />
   <br />
 
   <h1 class="www_sectiontitle">Introduction</h1>
@@ -50,12 +54,13 @@
     <dt>Purpose:</dt> <dd>Lanch one or all CVSup tasks.</dd>
     -->
 
-    <table style="width:75%">
+    <table class="c2">
+      <caption>Table 1</caption>
       <tr>
         <th>Script Name:</th>
         <th>Author:</th>
         <th>Requires:</th>
-        <th colspan="2">Purpose:</th>
+        <th>Purpose:</th>
       </tr>
       <tr>
         <td><a href="software/revised.txt">revised</a></td>
@@ -85,35 +90,42 @@
 
   <h2 class="www_subsection">Bash Scripts</h2>
 
-    <table style="width:75%">
+    <table class="c2">
+        <caption>Table two</caption>
       <tr>
         <th>Script Name:</th>
         <th>Author:</th>
         <th>Requires:</th>
-        <th colspan="2">Purpose:</th>
+        <th>Purpose:</th>
       </tr>
       <tr>
-        <td><a href="software/upgrade">upgrade</a></td>
+        <td><a href="software/upgrade.txt">upgrade</a></td>
         <td>Name &mdash; (<a href="mailto:">email</a>)</td>
         <td>cvsup</td>
         <td>Launch one or all CVSup tasks.</td>
       </tr>
       <tr>
-        <td><a href="software/">upgrade</a></td>
-        <td>Name &mdash; (<a href="mailto:">email</a>)</td>
-        <td>cvsup</td>
-        <td>description</td>
+        <td><a href="software/make_snapshot.sh">make_snapshot.sh</a></td>
+        <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">E-mail</a>)</td>
+        <td>bash, rsync and mailx</td>
+        <td>Script to automate the use of rsync to archive home directory</td>
       </tr>
       <tr>
-        <td><a href="software/">upgrade</a></td>
-        <td>Name &mdash; (<a href="mailto:">email</a>)</td>
-        <td>cvsup</td>
-        <td>description</td>
+        <td><a href="software/daily_snapshot_rotate.sh">daily_snapshot_rotate.sh</a></td>
+        <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">E-mail</a>)</td>
+        <td>bash, rsync and mailx</td>
+        <td>Script to automate the rotation of achive home directories</td>
       </tr>
       <tr>
-        <td><a href="software/">upgrade</a></td>
-        <td>Name &mdash; (<a href="mailto:">email</a>)</td>
-        <td>cvsup</td>
+        <td><a href="software/verify_disc_backup.sh">verify_disc_backup.sh</a></td>
+        <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">E-mail</a>)</td>
+        <td>bash and md5sum</td>
+        <td>Script to calulate md5sum totals of tar files in backup directories</td>
+      </tr>
+      <tr>
+        <td><a href="software/chat.txt">chat</a></td>
+        <td>David B.&mdash; (<a href="mailto:">email</a>)</td>
+        <td>bash and epic</td>
         <td>description</td>
       </tr>
       <tr>
@@ -122,20 +134,33 @@
         <td>bash</td>
         <td>Reset the title of putty title window</td>
       </tr>
+      <tr>
+        <td><a href="software/watch-url3.txt">watch-url3</a></td>
+        <td>David Billsbrough &mdash; (<a href="mailto:billsbrough@gmail.com">Email</a>)</td>
+        <td>bash, mailx, sed and urlwatch</td>
+        <td>Check status of new and changed web sites</td>
+      </tr>
+      <tr>
+        <td><a href="software/watch-url4.txt">watch-url4</a></td>
+        <td>David Billsbrough &mdash; (<a href="mailto:billsbrough@gmail.com">Email</a>)</td>
+        <td>awk, bash, mailx, touch and urlwatch</td>
+        <td>Check status of new and changed web sites</td>
+      </tr>
     </table>
 
 
   <h2 class="www_subsection">ANSI 'C' and C++ (ver.11) source code</h2>
 
-    <table style="width:75%">
+    <table class="c2">
+        <caption>Table three</caption>
       <tr>
         <th>Script Name:</th>
         <th>Author:</th>
+        <th>Purpose:</th>
         <th>Requires:</th>
-        <th colspan="2">Purpose:</th>
       </tr>
       <tr>
-        <td><a href="software/bubble3.c">bubble3.c</a></td>
+        <td><a href="software/bubble3.txt">bubble3.c</a></td>
         <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">Email</a>)</td>
         <td>Exec file and data file</td>
         <td>Sample program to demo Bubble Sort</td>
@@ -149,43 +174,56 @@
       <tr>
         <td><a href="software/sinewave.txt">sinewave.c</a></td>
         <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">Email</a>)</td>
-        <td>demo 'C' file</td>
+        <td>A demo 'C' program ported from BASIC and David Ahl 101 games</td>
         <td>C language</td>
       </tr>
       <tr>
         <td><a href="software/generate_password.txt">generate-pw.c</a></td>
-        <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">Email</a>)</td>
+        <td>Carl S. Gutekunst &mdash; (<a href="mailto:unknown@example.com">Email</a>)</td>
         <td>simple 'C' program to generate a random password</td>
         <td>C language - POSIX</td>
+      </tr>
+      <tr>
+        <td><a href="software/call_subprocess.txt">call_subprocess.c</a></td>
+        <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">Email</a>)</td>
+        <td>simple program to send test data to a couple of windows using Ncurses</td>
+        <td>C language using ncurses - POSIX</td>
       </tr>
     </table>
 
   <h2 class="www_subsection">Other Scripts</h2>
 
-    <table style="width:75%">
+    <table class="c2">
+        <caption>Table four</caption>
       <tr>
         <th>Script Name:</th>
         <th>Author:</th>
         <th>Requires:</th>
-        <th colspan="2">Purpose:</th>
+        <th>Purpose:</th>
       </tr>
       <tr>
         <td><a href="software/degree_conversion.sh">degree_conversion.sh</a></td>
-        <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">email</a>)</td>
+        <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">E-mail</a>)</td>
         <td>bc, calc and zsh</td>
         <td>Convert F to C degrees.</td>
       </tr>
       <tr>
         <td><a href="software/celsius_conversion.sh">Celsius_conversion.sh</a></td>
-        <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">email</a>)</td>
+        <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">E-mail</a>)</td>
         <td>bc, calc and zsh</td>
         <td>Convert C to F degrees.</td>
       </tr>
       <tr>
         <td><a href="software/daystogo.lua">daystogo.lua</a></td>
-        <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">email</a>)</td>
+        <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">E-mail</a>)</td>
         <td>Lua 5.3</td>
         <td>Days to go calculator</td>
+      </tr>
+      <tr>
+        <td><a href="software/shellsort.lua">shellsort.lua</a></td>
+        <td>David B. &mdash; (<a href="mailto:billsbrough@gmail.com">E-mail</a>)</td>
+        <td>Lua 5.3</td>
+        <td>Example of a shell sort of integers</td>
       </tr>
       <tr>
         <td><a href="software/convert-temp.sh">convert-temp.sh</a></td>
@@ -196,21 +234,21 @@
     </table>
 
   <ol class="square">
-    <li>Project <a href="">One</a>  </li>
-    <li>Project <a href="">Two</a>  </li>
-    <li>Project <a href="">Three</a> </li>
+    <li>Project <a href="proj1.html">One</a>  </li>
+    <li>Project <a href="proj2.html">Two</a>  </li>
+    <li>Project <a href="proj3.html">Three</a> </li>
   </ol>
 
   <br /><br /><br />
-  <table border="0" cellspacing="0" width="100%" bgcolor="#0456FF" summary="footer">
+  <table class="c3">
     <tr>
-      <td width="150"><span class="c1">David Billsbrough</span></td>
-      <td width="150"><span class="c1">Copyright &copy; 2002-2021</span></td>
+      <td class="c1"><span class="c1">David Billsbrough</span></td>
+      <td class="c1"><span class="c1">Copyright &copy; 2002-2022</span></td>
     </tr>
   </table>
   <br /><br /><br />
 
   <hr>
-  <span>Revised: Saturday, July 17, 2021 at 20:45:14 PM (EDT)</span>
+  <span>Revised: Thursday, August 18, 2022 at 15:50:27 PM (EDT)</span>
 </body>
 </html>

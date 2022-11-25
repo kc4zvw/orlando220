@@ -1,0 +1,111 @@
+/* Call a couple of functions to print to ncurses windows */
+
+// $Id: call_subprocess.c,v 0.2 2022/06/29 02:17:47 kc4zvw Exp kc4zvw $
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <curses.h>
+#include <unistd.h>
+
+#define ESC 27
+#define maxlines 24
+#define DELAY 3
+#define TOPLINE 3
+
+/* function prototypes */
+void draw_border(WINDOW *);
+void write_data(WINDOW *);
+void write_data_reverse(WINDOW *);
+
+int main(void)
+{
+	WINDOW *text_window1;
+	WINDOW *text_window2;
+	WINDOW *text_window3;
+
+	/* Initialize curses */
+
+	initscr();
+	cbreak();
+	noecho();
+	intrflush(stdscr, FALSE);
+	keypad(stdscr, TRUE);
+
+	clear();
+	printw("Running ...");
+
+	curs_set(0);				/* turn off cursor */
+	mvprintw(maxlines, (COLS - 30) / 2, "Ncurses Windows Demonstration");
+	refresh();
+	sleep(2);
+	mvprintw(maxlines, (COLS - 30) / 2, " ");
+	clrtoeol();
+	refresh();
+
+	text_window1 = newwin(30, 40, 4, 1);
+	text_window2 = newwin(30, 40, 4, 43);
+	text_window3 = newwin(30, 40, 4, 86);
+
+	draw_border(text_window1);
+	draw_border(text_window2);
+	draw_border(text_window3);
+
+	/* Add Windows Labels */
+	mvaddstr(TOPLINE,  8, "Window Number One");
+	mvaddstr(TOPLINE, 51, "Window Number Two");
+	mvaddstr(TOPLINE, 94, "Window Number Three");
+
+	refresh();
+	sleep(2);
+	write_data(text_window1);
+	sleep(DELAY);
+	write_data_reverse(text_window2);
+	refresh();
+	sleep(DELAY);
+	write_data(text_window3);
+	refresh();
+	sleep(1);
+	curs_set(1);				/* turn on cursor */
+
+	mvaddstr((LINES - 5), 0, "Press any key to quit");
+	refresh();
+
+	getch();
+	endwin();
+
+	return EXIT_SUCCESS;
+}
+
+void write_data(WINDOW *text)
+{
+	int i;
+
+	for (i = 0; i < 20; ++i) {
+		mvwprintw(text, i + 4, 5, "*");
+		wprintw(text, " %3d ", i + 1);
+	}
+	wrefresh(text);
+}
+
+void write_data_reverse(WINDOW *text)
+{
+	int i;
+
+	for (i = 20; i > 0; i--) {
+		mvwprintw(text, 24 - i, 5, "*");
+		wprintw(text, " %3d ", i);
+	}
+	wrefresh(text);
+}
+
+void draw_border(WINDOW *win)
+{
+	char verch, horch;
+	horch = '-';
+	verch = '|';
+
+	wborder(win, verch, verch, horch, horch, '+', '+', '+', '+');
+	wrefresh(win);
+}
+
+/** End of File **/

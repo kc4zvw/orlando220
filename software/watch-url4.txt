@@ -1,0 +1,54 @@
+#!/bin/bash
+#
+# $Id: watch-urls3,v 0.1 2022/08/15 14:16:20 root Exp root $
+
+MAILCC="user2@localhost"
+MAILTO="user1@localhost"
+TEMP_REPORT=/tmp/urlwatch.$$
+TOPIC="Changed websites context"
+SIGLINE="$HOME/inject2$$.txt"
+
+WHICH=/usr/bin/which
+MAILER=$(${WHICH} mailx)
+REMOVE=$(${WHICH} rm)
+WATCHER=$(${WHICH} urlwatch)
+
+function append_report
+{
+        touch $SIGLINE
+
+        cat <<- ETX > "$SIGLINE"
+
+        These contents will be written to the file.
+        This line is indented.
+
+        regards,
+
+        The Management
+        --
+        ETX
+
+        sed -i -e "s/^-- $/added/" $TEMP_REPORT
+        sed -i -e "/"^added"/ r $SIGLINE" $TEMP_REPORT
+}
+
+echo
+echo "Checking for changes on watched websites ..."
+
+${WATCHER} > "$TEMP_REPORT"
+
+if test -s $TEMP_REPORT ; then
+        echo "Sending the change report"
+        append_report
+        ${MAILER} -s "$TOPIC" "$MAILTO" "$MAILCC" < $TEMP_REPORT
+else
+        echo "Nothing is new and/or nothing has changed."
+fi
+
+${REMOVE} -f "$TEMP_REPORT"
+${REMOVE} -f "$SIGLINE"
+
+echo "Finished"
+echo
+
+# End of script
